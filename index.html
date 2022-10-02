@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="/pages/home/index.css">
+    <link rel="stylesheet" href="/pages/home/header.css">
+    <link rel="stylesheet" href="/pages/home/buttons.css">
+    <link rel="stylesheet" href="/pages/home/sections.css">
+    <link rel="stylesheet" href="/pages/home/modal.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-items">
+            <h1><span>Control</span> Finance</h1>
+            <button class="register-value">Registrar novo valor</button>
+        </div>
+    </header>
+    <main id="app">
+        <section class="finance-resume-section section-type-1">
+            <h3 class="section-title">Resumo Financeiro</h3>
+            <ul>
+                <li> <button class="finance-resume-btn">Todos</button> </li>
+                <li> <button class="finance-resume-btn">Entradas</button> </li>
+                <li> <button class="finance-resume-btn">Saídas</button> </li>
+            </ul>
+        </section>
+        <section class="sum-values-section section-type-1">
+            <h3 class="section-title">Soma dos valores</h3>
+            <div>
+                <p class="sum-values"></p>
+            </div>
+        </section>
+        <section class="values-added-section section-type-2">
+            <ul class="values-list">
+                
+            </ul>
+        </section>
+    </main>
+    <script src="/pages/home/valuesData.js"></script>
+    <script src="/pages/home/index.js"></script>
+    <script src="/scripts/modal.js"></script>
+    <script src="/scripts/values-listed.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  */
+.section-type-1 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    min-width: 100%;
+    height: 32px;
+}
+
+.section-type-2{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    min-width: 100%;
+}
+
+.section-type-1 h3 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+}
+
+/*  */
+.finance-resume-section ul {
+    display: flex;
+    gap: 14px;
+    height: 100%;
+}
+
+.sum-values-section {
+    padding: 14px 17px;
+    background-color: var(--color-grey-5);
+    border-radius: var(--radius-2);
+}
+
+.values-added-section {
+    height: 100px;
+    background-color: rgba(55, 175, 55, 0.198);
+}

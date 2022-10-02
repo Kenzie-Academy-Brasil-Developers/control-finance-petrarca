@@ -1,0 +1,68 @@
+header button {
+    color: var(--fixed-white);
+    background-color: var(--color-brand-1);
+    width: 140px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-1);
+    transition: var(--animation-type) var(--animation-duration);
+    border: 1px solid transparent;
+}
+header button:hover {
+    background-color: var(--color-brand-2);
+}
+
+.finance-resume-btn {
+    padding: 0 13px;
+    height: 100%;
+    background-color: var(--fixed-white);
+    border: 2px solid var(--color-grey-5);
+    border-radius: var(--radius-1);
+
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+    transition: var(--animation-type) var(--animation-duration);
+}
+
+.finance-resume-btn:focus {
+    color: var(--color-brand-2);
+    border-color: var(--color-brand-1);
+    background-color: var(--color-brand-3);
+}
+
+.modal-close {
+    border-radius: var(--radius-2);
+    min-width: 35px;
+    height: 30px;
+    border: 1px solid transparent;
+}
+
+.modal-button-1 {
+    padding: 0 13px;
+    height: 25px;
+    background-color: var(--fixed-white);
+    border: 2px solid var(--color-grey-5);
+    border-radius: var(--radius-2);
+
+    justify-self: flex-end;
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+    transition: var(--animation-type) var(--animation-duration);
+}
+.modal-button-1:focus {
+    color: var(--color-brand-2);
+    border-color: var(--color-brand-1);
+    background-color: var(--color-brand-3);
+}
+
+.submit-modal {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+    border-color: var(--color-brand-1);
+}
+
+.exclude-value-item {
+    background-image: url("/assets/trash.svg");
+}

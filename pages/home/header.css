@@ -1,0 +1,28 @@
+header {
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-grey-5);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--global-width-1);
+}
+@media(max-width: 1120px) {
+    .header-items{
+        width: var(--global-width-2);
+    }
+}
+
+header span{
+    color: var(--color-brand-1);
+    font-weight: var(--font-weight-1)
+}
