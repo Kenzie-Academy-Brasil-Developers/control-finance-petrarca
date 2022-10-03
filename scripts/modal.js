@@ -65,6 +65,7 @@ function addValueModal() {
     valueIsEnter.classList.add("type-of-value", "modal-button-1")
     valueIsExit.classList.add("type-of-value", "modal-button-1")
 
+    submitBox.classList.add("modal-submit-box")
     cancelBtn.classList.add("modal-button-1")
     confirmBtn.classList.add("submit-modal", "modal-button-1")
 
