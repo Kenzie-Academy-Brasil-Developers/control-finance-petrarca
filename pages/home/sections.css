@@ -9,7 +9,7 @@ section {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-2);
     min-width: 100%;
-    height: 32px;
+    height: 38px;
 }
 
 .section-type-2{
@@ -37,6 +37,5 @@ section {
 }
 
 .values-added-section {
-    height: 100px;
-    background-color: rgba(55, 175, 55, 0.198);
+    padding: 1rem 0 ;
 }

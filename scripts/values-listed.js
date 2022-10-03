@@ -25,14 +25,17 @@ function renderValuesCards(data){
     let buttonsContainer = document.createElement('div')
     let cardTypeContainer = document.createElement('div')
     let cardType = document.createElement('p')
-    let exitBtn = document.createElement('button')
+    let excludeBtnBox = document.createElement('div')
+    let excludeBtn = document.createElement('button')
 
 
         newCard.classList.add("every-value-listed")
         theValue.classList.add("numeral-value")
         cardTypeContainer.classList.add("value-type-container")
         cardType.classList.add("value-type-view")
-        exitBtn.classList.add("exclude-value-item")
+        buttonsContainer.classList.add("item-buttons-box")
+        excludeBtnBox.classList.add("exclude-value-container")
+        excludeBtn.classList.add("exclude-value-item")
 
         
         theValue.innerText = `R$ ${element.value}`
@@ -43,7 +46,8 @@ function renderValuesCards(data){
     }
         
     cardTypeContainer.append(cardType)
-    buttonsContainer.append(cardTypeContainer, exitBtn)
+    excludeBtnBox.append(excludeBtn)
+    buttonsContainer.append(cardTypeContainer, excludeBtnBox)
     newCard.append(theValue, buttonsContainer)
     listForValues.append(newCard)
     })

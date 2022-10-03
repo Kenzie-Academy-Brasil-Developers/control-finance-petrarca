@@ -134,7 +134,7 @@ function insertNewValue() {
             } else if(activeBtn.innerText == "Saída") {
                 object.categoryID = 1
             }
-            insertedValues.push(object)
+            insertedValues.unshift(object)
             fullModal.remove()
             renderValuesCards(insertedValues)
         } 
