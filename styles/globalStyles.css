@@ -37,9 +37,10 @@
   --radius-2: 0.25rem;
 
   --animation-duration: 0.2s;
-  --animation-duration-2: 2s; 
+  --animation-duration-2: 0.3s; 
   --animation-type-1: ease;
   --animation-type-2: linear;
+  --animation-style-1: transicasso;
 
   --font-family-1: "Inter", sans-serif;
   --font-family-2: "Nunito", sans-serif;

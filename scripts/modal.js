@@ -4,6 +4,8 @@ let htmlBody = document.querySelector('body')
 let pressingB = registerValueBtn.forEach((button) => {
     button.addEventListener('click', () => {
         addValueModal()
+        modalReleaseType()
+        insertNewValue()
     })
 })
 
@@ -45,9 +47,9 @@ function addValueModal() {
     })
     confirmBtn.addEventListener('click', (event) => {
         event.preventDefault()
-        console.log("hahahahahahahhahahahahah")
     })
 
+    modalBackground.classList.add("full-modal")
 
     modalBackground.classList.add("shadow-background")
     modalBody.classList.add("modal-box")
@@ -56,8 +58,10 @@ function addValueModal() {
     closeBtn.classList.add("modal-close")
 
     valueEnterBox.classList.add("modal-value-insert")
+    inputValue.classList.add("value-input")
 
     valueLabelBox.classList.add("type-select-box")
+    valuesCategory.setAttribute('id',"value-type-wrapper")
     valueIsEnter.classList.add("type-of-value", "modal-button-1")
     valueIsExit.classList.add("type-of-value", "modal-button-1")
 
@@ -88,4 +92,51 @@ function addValueModal() {
     modalBackground.append(modalBody)
     htmlBody.append(modalBackground)
 
+}
+
+function modalReleaseType() {
+    let container = document.getElementById('value-type-wrapper')
+    
+    console.log(container)
+    container.addEventListener('click', (event) => {
+        event.preventDefault()
+        let buttons = container.querySelectorAll(".type-of-value")
+        let clicked = event.target
+        
+        if(clicked.id != "value-type-wrapper"){
+            buttons.forEach((element) => {
+                element.classList.remove("activeBtn")
+            })
+            clicked.classList.add("activeBtn")
+        }
+    })
+}
+
+function insertNewValue() {
+    let fullModal = document.querySelector(".full-modal")
+    let submitBtn = document.querySelector(".submit-modal")
+    submitBtn.addEventListener('click', (event) =>{
+        event.preventDefault()
+        
+        let valueInput = document.querySelector(".value-input")
+        let activeBtn = document.querySelector(".activeBtn")
+        console.log(valueInput)
+
+        if(typeof +valueInput.value == 'number' && activeBtn){
+
+            let object = {
+                id: insertedValues[insertedValues.length -1].id + 1,
+                value: +valueInput.value,
+            }
+
+            if(activeBtn.innerText == "Entrada"){
+                object.categoryID = 0
+            } else if(activeBtn.innerText == "Saída") {
+                object.categoryID = 1
+            }
+            insertedValues.push(object)
+            fullModal.remove()
+            renderValuesCards(insertedValues)
+        } 
+    })
 }

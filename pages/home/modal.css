@@ -17,7 +17,7 @@
     width: 550px;
     padding: 24px;
     border-radius: var(--radius-1);
-    animation: transicasso 0.3s linear;
+    animation: var(--animation-style-1) var(--animation-duration-2) var(--animation-type-2);
 }
 
 .modal-box div {

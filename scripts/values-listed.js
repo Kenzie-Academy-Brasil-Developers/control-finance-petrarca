@@ -17,6 +17,7 @@ let SelectList = listButtons.forEach((button) => {
 
 function renderValuesCards(data){
     listForValues.innerHTML = ""
+    if(data.length != 0){
     data.forEach((element, i) => {
 
     let newCard = document.createElement('li')
@@ -47,8 +48,9 @@ function renderValuesCards(data){
     listForValues.append(newCard)
     })
     sumValues(data)
+    }
 }
-console.log(insertedValues)
+
 function sumValues(data) {
     const calcSave = data.reduce((total, current)=> {
         if(current.categoryID == 0){
@@ -58,7 +60,6 @@ function sumValues(data) {
         }
     }, 0)
     let sumDisplay = document.querySelector('.sum-values')
-    console.log(calcSave)
     sumDisplay.innerText = calcSave.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 }
 renderValuesCards(insertedValues)
