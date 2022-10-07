@@ -27,7 +27,13 @@ function renderValuesCards(data){
     let cardType = document.createElement('p')
     let excludeBtnBox = document.createElement('div')
     let excludeBtn = document.createElement('button')
-
+    let trashFigure = document.createElement('img')
+        excludeBtn.addEventListener('click', (event)=> {
+            event.preventDefault()
+            insertedValues.splice(i, 1)
+            // console.log(element, i)
+            newCard.remove()
+        })
 
         newCard.classList.add("every-value-listed")
         theValue.classList.add("numeral-value")
@@ -37,7 +43,8 @@ function renderValuesCards(data){
         excludeBtnBox.classList.add("exclude-value-container")
         excludeBtn.classList.add("exclude-value-item")
 
-        
+        trashFigure.src = "./assets/trash.svg"
+
         theValue.innerText = `R$ ${element.value}`
     if(element.categoryID == 1){
         cardType.innerText = "Saída"
@@ -48,12 +55,14 @@ function renderValuesCards(data){
     cardTypeContainer.append(cardType)
     excludeBtnBox.append(excludeBtn)
     buttonsContainer.append(cardTypeContainer, excludeBtnBox)
+    excludeBtn.append(trashFigure)
     newCard.append(theValue, buttonsContainer)
     listForValues.append(newCard)
     })
     sumValues(data)
     }
 }
+
 
 function sumValues(data) {
     const calcSave = data.reduce((total, current)=> {

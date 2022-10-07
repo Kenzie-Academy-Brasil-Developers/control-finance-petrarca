@@ -98,7 +98,6 @@ function addValueModal() {
 function modalReleaseType() {
     let container = document.getElementById('value-type-wrapper')
     
-    console.log(container)
     container.addEventListener('click', (event) => {
         event.preventDefault()
         let buttons = container.querySelectorAll(".type-of-value")
@@ -121,21 +120,22 @@ function insertNewValue() {
         
         let valueInput = document.querySelector(".value-input")
         let activeBtn = document.querySelector(".activeBtn")
-        console.log(valueInput)
 
         if(typeof +valueInput.value == 'number' && activeBtn){
 
             let object = {
-                id: insertedValues[insertedValues.length -1].id + 1,
+                id: insertedValues.length ,
                 value: +valueInput.value,
             }
+            
 
             if(activeBtn.innerText == "Entrada"){
                 object.categoryID = 0
             } else if(activeBtn.innerText == "Saída") {
                 object.categoryID = 1
             }
-            insertedValues.unshift(object)
+            
+            insertedValues.push(object)
             fullModal.remove()
             renderValuesCards(insertedValues)
         } 

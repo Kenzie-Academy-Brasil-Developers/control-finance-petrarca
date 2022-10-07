@@ -69,8 +69,15 @@ width: 32px;
 height: 32px;
 }
 .exclude-value-item {
-    background-image: url("/assets/trash.svg");
-    width: 100%;
+    width: 32px;
     height:100%;
+    border: 2px solid var(--color-grey-5);
+    border-radius: var(--radius-2);
+    background-color: var(--fixed-white);
+    transition: var(--animation-type-1) var(--animation-duration-1);
+    transition: .12s linear;
+}
+.exclude-value-item:hover{
+    opacity: 30%;
 }
 
